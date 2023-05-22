@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Start">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/khand_bold"
+        android:letterSpacing="0.15"
+        android:text="TRAINPEDIA"
+        android:textColor="#008080"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="385dp"
+        android:layout_height="405dp"
+        app:srcCompat="@drawable/start"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="98dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Welcome to TRAINPEDIA"
+        android:textColor="#008080"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="503dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/khand_regular"
+        android:text="Ticket Train App that make you easy to buy a train ticket"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="551dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbtn"
+        android:fontFamily="@font/lato_bold"
+        android:paddingLeft="75dp"
+        android:paddingRight="75dp"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="50px"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="612dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
