@@ -20,7 +20,7 @@
     <RelativeLayout
         android:id="@+id/view2"
         android:layout_width="285dp"
-        android:layout_height="300dp"
+        android:layout_height="450dp"
         android:layout_gravity="center"
         android:background="@drawable/roundview"
         android:layout_centerHorizontal="true"
@@ -28,21 +28,58 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOGIN"
+            android:text="SIGN UP"
             android:textAlignment="center"
             android:fontFamily="@font/lato_bold"
             android:textSize="25sp"
             android:layout_marginTop="30dp"
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"/>
+        <EditText
+            android:id="@+id/usernamefirst"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/roundtext"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="First" />
+
+        <EditText
+            android:id="@+id/usernamelast"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@id/usernamefirst"
+            android:background="@drawable/roundtext"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="Last" />
+
+        <EditText
+            android:id="@+id/usernameemail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/roundtext"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:text="Email" />
 
         <EditText
             android:id="@+id/usernameUser"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="80dp"
+            android:layout_below="@id/usernameemail"
+            android:layout_marginTop="34dp"
             android:background="@drawable/roundtext"
+            android:layout_centerHorizontal="true"
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="5dp"
@@ -53,11 +90,11 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/usernameUser"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="32dp"
             android:background="@drawable/roundtext"
             android:ems="10"
             android:inputType="textPersonName"
+            android:layout_centerHorizontal="true"
             android:padding="5dp"
             android:text="Password" />
 
@@ -66,23 +103,11 @@
             android:layout_width="76dp"
             android:layout_height="32dp"
             android:layout_below="@id/passwordUser"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="39dp"
             android:background="@drawable/roundtext"
-            android:text="Login"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/asadmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/loginuser"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="17dp"
-            android:text="Belum Punya Akun?"
-            android:clickable="true"
-            android:onClick="admin" />
-
+            android:text="Sign up"
+            android:textSize="15sp" />
 
 
     </RelativeLayout>

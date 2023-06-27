@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/khand_bold"
+        android:letterSpacing="0.15"
+        android:text="TRAINPEDIA"
+        android:textColor="#008080"
+        android:textSize="40dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/usernameUser"
+        android:layout_width="375dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/back"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:text="Cari Tiket" />
+
+    <ListView
+        android:layout_width="375dp"
+        android:layout_height="520dp"
+        android:layout_marginTop="120dp"
+        android:divider="#000000"
+        android:dividerHeight="2dp"
+        android:background="@drawable/back"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="650dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundbtn"
+        android:text="Checkout" />
+
+</RelativeLayout>
+
