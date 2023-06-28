@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1003856420889",
+    "project_id": "trainpedia-a76fd",
+    "storage_bucket": "trainpedia-a76fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003856420889:android:1fcab2d88a2783c974ca88",
+        "android_client_info": {
+          "package_name": "com.example.trainpedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003856420889-d51lo5qp3kl2egnkcnsa6ormgk9v4fip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrlp5P5qvny4Z-pjkd-D2Wko50KzOwD7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003856420889-d51lo5qp3kl2egnkcnsa6ormgk9v4fip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

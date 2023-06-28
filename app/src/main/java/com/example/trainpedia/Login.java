@@ -25,6 +25,6 @@ public class Login extends AppCompatActivity {
         });
     }
     public void admin (View v){
-        startActivity(new Intent(Login.this, MakeAcc.class));
+        startActivity(new Intent(Login.this, SignUp.class));
     }
 }

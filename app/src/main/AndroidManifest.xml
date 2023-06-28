@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="badoystudio.com.splashscreengojek">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:allowBackup="true"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        tools:node="merge"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.midtrans.sdk.coreapi.MerchantServerKey"
+            android:value="Mid-server-painIXfJJ3Tms_M7EIdHhNYe" />
+
+        <meta-data
+            android:name="com.midtrans.sdk.coreapi.MerchantClientKey"
+            android:value="Mid-client-JdqaWyQC96vfqx8H" />
+        <meta-data
+            android:name="com.midtrans.sdk.coreapi.MerchantServerUrl"
+            android:value="https://your-merchant-base-url.com" />
+
         <activity
-            android:name=".MakeAcc"
+            android:name=".SingUp"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
