@@ -45,7 +45,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="5dp"
-            android:text="First" />
+            android:hint="First" />
 
         <EditText
             android:id="@+id/usernamelast"
@@ -58,7 +58,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="5dp"
-            android:text="Last" />
+            android:hint="Last" />
 
         <EditText
             android:id="@+id/usernameemail"
@@ -68,9 +68,9 @@
             android:layout_marginTop="175dp"
             android:background="@drawable/roundtext"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:padding="5dp"
-            android:text="Email" />
+            android:hint="Email" />
 
         <EditText
             android:id="@+id/usernameUser"
@@ -83,7 +83,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="5dp"
-            android:text="Username" />
+            android:hint="Username" />
 
         <EditText
             android:id="@+id/passwordUser"
@@ -93,20 +93,20 @@
             android:layout_marginTop="32dp"
             android:background="@drawable/roundtext"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:layout_centerHorizontal="true"
             android:padding="5dp"
-            android:text="Password" />
+            android:hint="Password" />
 
         <Button
-            android:id="@+id/loginuser"
+            android:id="@+id/btnDaftar"
             android:layout_width="76dp"
             android:layout_height="32dp"
             android:layout_below="@id/passwordUser"
             android:layout_marginTop="39dp"
             android:background="@drawable/roundtext"
             android:layout_centerHorizontal="true"
-            android:text="Sign up"
+            android:hint="Sign up"
             android:textSize="15sp" />
 
 

@@ -24,7 +24,7 @@
             android:value="https://your-merchant-base-url.com" />
 
         <activity
-            android:name=".SingUp"
+            android:name=".SignUp"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
