@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="2dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvArgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Argo Ekonomi"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/tvKelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvArgo"
+            android:text="Ekonomi"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tvJurusan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jakarta - Solo"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/tvKelas"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/tvJadwal"
+            android:layout_below="@id/tvJurusan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15.00 - 17.00"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <TextView
+            android:id="@+id/tvHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@id/tvArgo"
+            android:text="Rp 100.000"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"/>
+        <Button
+            android:id="@+id/btnBeli"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@id/tvHarga"
+            android:layout_alignBaseline="@id/tvJadwal"
+            android:background="@drawable/roundbtn"
+            android:text="Beli"
+            android:layout_marginBottom="8dp"
+            />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
