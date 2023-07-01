@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,7 +30,7 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        final TextView login = findViewById(R.id.asadmin);
         email = findViewById(R.id.usernameemail);
         firstName = findViewById(R.id.usernamefirst);
         lastName = findViewById(R.id.usernamelast);
@@ -96,6 +97,12 @@ public class SignUp extends AppCompatActivity {
                     });
 
                 }
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignUp.this, Login.class));
             }
         });
 

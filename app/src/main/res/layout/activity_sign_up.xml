@@ -103,11 +103,21 @@
             android:layout_width="76dp"
             android:layout_height="32dp"
             android:layout_below="@id/passwordUser"
-            android:layout_marginTop="39dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/roundtext"
             android:layout_centerHorizontal="true"
             android:hint="Sign up"
             android:textSize="15sp" />
+        <TextView
+            android:id="@+id/asadmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnDaftar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Sudah Punya Akun?"
+            android:clickable="true"
+            android:onClick="admin" />
 
 
     </RelativeLayout>
