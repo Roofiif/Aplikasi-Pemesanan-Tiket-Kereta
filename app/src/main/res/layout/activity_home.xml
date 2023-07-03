@@ -33,7 +33,6 @@
         android:inputType="text"
         android:layout_centerHorizontal="true"
         android:focusable="false"
-        app
         app:queryHint="Cari Tiket" />
 
     <androidx.recyclerview.widget.RecyclerView
