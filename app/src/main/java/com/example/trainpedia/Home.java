@@ -3,6 +3,7 @@ package com.example.trainpedia;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class Home extends AppCompatActivity {
@@ -32,6 +34,8 @@ public class Home extends AppCompatActivity {
     ArrayList<Tiket> list;
     MyAdapter myAdapter;
     DatabaseReference dRef;
+    SearchView searchView;
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -49,6 +53,8 @@ public class Home extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<>();
         myAdapter = new MyAdapter(this, list);
+        searchView =findViewById(R.id.searchTiket);
+        searchView.clearFocus();
         recyclerView.setAdapter(myAdapter);
 
         dRef.addValueEventListener(new ValueEventListener() {
@@ -68,6 +74,18 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
+            }
+        });
 
 
         Button button2 = findViewById(R.id.button);
@@ -94,5 +112,23 @@ public class Home extends AppCompatActivity {
         session.setLogin(false);
         finish();
         startActivity(new Intent(Home.this,Login.class));
+    }
+    public void searchList(String text){
+        ArrayList<Tiket> searchList = new ArrayList<>();
+        for(Tiket tiket: list){
+            if (tiket.getArgo().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){
+                searchList.add(tiket);
+            }
+            else if (tiket.getHarga().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){
+                searchList.add(tiket);
+            }
+            else if (tiket.getJurusan().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){
+                searchList.add(tiket);
+            }
+            else if (tiket.getKelas().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){
+                searchList.add(tiket);
+            }
+        }
+        myAdapter.searchDataList(searchList);
     }
 }
