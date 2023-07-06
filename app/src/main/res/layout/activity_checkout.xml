@@ -39,20 +39,104 @@
         android:background="@drawable/roundbtn"
         android:text="Bayar" />
 
-    <View
-        android:id="@+id/view3"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:background="@drawable/back2"/>
-    <View
+        android:background="@drawable/back2">
+
+        <TextView
+            android:id="@+id/argo"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Argo"
+            android:fontFamily="@font/khand_regular"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/harga"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/khand_regular"
+            android:text="Harga"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/jadwal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+            android:text="Jadwal"
+            android:fontFamily="@font/khand_regular"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/jurusan"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="120dp"
+            android:text="Jurusan"
+            android:fontFamily="@font/khand_regular"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/kelas"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="160dp"
+            android:text="Kelas"
+            android:fontFamily="@font/khand_regular"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+    </RelativeLayout>
+    <RelativeLayout
         android:id="@+id/view4"
         android:layout_width="350dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="320dp"
-        android:background="@drawable/back2"/>
+        android:background="@drawable/back2">
+
+        <TextView
+            android:id="@+id/penumpang"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Penumpang"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/namapenumpang"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/khand_regular"
+            android:text="Nama Penumpang"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/nomorkursi"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="100dp"
+            android:text="Nomor Kursi"
+            android:fontFamily="@font/khand_regular"
+            android:textSize="20dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+    </RelativeLayout>
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
