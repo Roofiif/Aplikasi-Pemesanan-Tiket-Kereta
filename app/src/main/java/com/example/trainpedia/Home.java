@@ -1,22 +1,19 @@
 package com.example.trainpedia;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +27,7 @@ import java.util.Locale;
 public class Home extends AppCompatActivity {
     private SessionManager session;
     ListView myListView;
+    ValueEventListener eventListener;
     RecyclerView recyclerView;
     ArrayList<Tiket> list;
     MyAdapter myAdapter;
@@ -37,7 +35,8 @@ public class Home extends AppCompatActivity {
     SearchView searchView;
 
 
-    @SuppressLint("WrongViewCast")
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,19 +49,22 @@ public class Home extends AppCompatActivity {
         recyclerView = findViewById(R.id.listView);
         dRef = FirebaseDatabase.getInstance("https://trainpedia-a76fd-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Tiket");
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(Home.this, 1);
+        recyclerView.setLayoutManager(gridLayoutManager);
         list = new ArrayList<>();
         myAdapter = new MyAdapter(this, list);
         searchView =findViewById(R.id.searchTiket);
         searchView.clearFocus();
         recyclerView.setAdapter(myAdapter);
 
-        dRef.addValueEventListener(new ValueEventListener() {
+
+        eventListener = dRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+                list.clear();
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Tiket tiket = dataSnapshot.getValue(Tiket.class);
+                    tiket.setKey(dataSnapshot.getKey());
                     list.add(tiket);
                 }
                 myAdapter.notifyDataSetChanged();
@@ -70,7 +72,7 @@ public class Home extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Log.e("Firebase", "Operasi dibatalkan. Pesan Kesalahan: " + error.getMessage());
             }
         });
 
@@ -87,8 +89,7 @@ public class Home extends AppCompatActivity {
             }
         });
 
-
-        Button button2 = findViewById(R.id.button);
+        Button button2 = findViewById(R.id.btnCheckout);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,9 +118,6 @@ public class Home extends AppCompatActivity {
         ArrayList<Tiket> searchList = new ArrayList<>();
         for(Tiket tiket: list){
             if (tiket.getArgo().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){
-                searchList.add(tiket);
-            }
-            else if (tiket.getHarga().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){
                 searchList.add(tiket);
             }
             else if (tiket.getJurusan().toLowerCase(Locale.ROOT).contains(text.toLowerCase())){

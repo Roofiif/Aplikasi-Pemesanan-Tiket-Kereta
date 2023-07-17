@@ -21,23 +21,13 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMetode"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="550dp"
         android:layout_centerHorizontal="true"
         android:text="Metode Pembayaran"
         android:background="@drawable/roundbtn"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="620dp"
-        android:layout_marginRight="-4dp"
-        android:background="@drawable/roundbtn"
-        android:text="Bayar" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -46,52 +36,51 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/back2">
-
         <TextView
-            android:id="@+id/argo"
-            android:layout_width="100dp"
+            android:id="@+id/beliArgo"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:text="Argo"
+            android:text=""
             android:fontFamily="@font/khand_regular"
             android:textSize="25dp"
             android:textColor="#000000"
             android:gravity="center" />
         <TextView
-            android:id="@+id/harga"
-            android:layout_width="100dp"
+            android:id="@+id/beliHarga"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_below="@+id/beliArgo"
             android:fontFamily="@font/khand_regular"
-            android:text="Harga"
+            android:text=""
             android:textSize="25dp"
             android:textColor="#000000"
             android:gravity="center" />
         <TextView
-            android:id="@+id/jadwal"
-            android:layout_width="100dp"
+            android:id="@+id/beliJadwal"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="80dp"
-            android:text="Jadwal"
-            android:fontFamily="@font/khand_regular"
-            android:textSize="25dp"
-            android:textColor="#000000"
-            android:gravity="center" />
-        <TextView
-            android:id="@+id/jurusan"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="120dp"
-            android:text="Jurusan"
+            android:layout_below="@id/beliHarga"
+            android:text=""
             android:fontFamily="@font/khand_regular"
             android:textSize="25dp"
             android:textColor="#000000"
             android:gravity="center" />
         <TextView
-            android:id="@+id/kelas"
-            android:layout_width="100dp"
+            android:id="@+id/beliJurusan"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="160dp"
-            android:text="Kelas"
+            android:layout_below="@+id/beliJadwal"
+            android:text=""
+            android:fontFamily="@font/khand_regular"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/beliKelas"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/beliJurusan"
+            android:text=""
             android:fontFamily="@font/khand_regular"
             android:textSize="25dp"
             android:textColor="#000000"
@@ -145,13 +134,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/roundbtn"
         app:srcCompat="?attr/actionModeCloseDrawable" />
-
-<!--    <ListView-->
-<!--        android:layout_width="350dp"-->
-<!--        android:layout_height="450dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:background="@drawable/back2"/>-->
 
 
 </RelativeLayout>

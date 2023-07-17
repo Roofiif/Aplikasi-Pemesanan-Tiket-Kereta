@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
+    android:id="@+id/recCard"
     app:cardCornerRadius="8dp"
     android:layout_margin="2dp">
     <RelativeLayout
@@ -61,16 +62,24 @@
             android:layout_marginRight="8dp"
             android:textColor="@color/black"
             android:textSize="16dp"/>
-        <Button
+
+        <TextView
             android:id="@+id/btnBeli"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:layout_alignLeft="@id/tvHarga"
             android:layout_alignBaseline="@id/tvJadwal"
+            android:layout_alignLeft="@id/tvHarga"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/roundbtn"
-            android:text="Beli"
-            android:layout_marginBottom="8dp"
-            />
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="Beli" />
+
+
     </RelativeLayout>
 
 

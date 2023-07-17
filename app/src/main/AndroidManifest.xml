@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="badoystudio.com.splashscreengojek">
+    xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         tools:replace="android:allowBackup"
@@ -14,24 +13,17 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.midtrans.sdk.coreapi.MerchantServerKey"
-            android:value="Mid-server-painIXfJJ3Tms_M7EIdHhNYe" />
+            android:value="SB-Mid-server-pnv1-Ll5Zo1jxje7Sh4U--Yf" />
 
         <meta-data
             android:name="com.midtrans.sdk.coreapi.MerchantClientKey"
-            android:value="Mid-client-JdqaWyQC96vfqx8H" />
+            android:value="SB-Mid-client-oIRLks6imRW0lZIJ" />
         <meta-data
             android:name="com.midtrans.sdk.coreapi.MerchantServerUrl"
-            android:value="https://your-merchant-base-url.com" />
+            android:value="https://traintiketpedia.000webhostapp.com/request.php/charge" />
 
         <activity
             android:name=".SignUp"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Metode"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Login extends AppCompatActivity {
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance("https://trainpedia-a76fd-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
+    SharedPreferences sharedPreferences;
     private SessionManager session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,19 @@ public class Login extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.hasChild(Username)){
+                                sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                                 final String getPassword = snapshot.child(Username).child("password").getValue(String.class);
+                                String firstname = snapshot.child(Username).child("firstName").getValue(String.class);
+                                String lastname = snapshot.child(Username).child("lastName").getValue(String.class);
+                                String email = snapshot.child(Username).child("email").getValue(String.class);
+                                String fullName = firstname + " " + lastname;
+
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("firstname", firstname);
+                                editor.putString("lastname", lastname);
+                                editor.putString("fullname", fullName);
+                                editor.putString("email", email);
+                                editor.apply();
                                 if (getPassword.equals(Password)){
                                     Toast.makeText(Login.this, "Sukses Login", Toast.LENGTH_SHORT).show();
                                     SessionManager sessionManager = new SessionManager(getApplicationContext());

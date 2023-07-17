@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCheckout"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="650dp"
